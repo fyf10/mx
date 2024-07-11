@@ -34,11 +34,11 @@
         type: String,
         default: ''
       },
-      version_chrome:{
+      version_chrome: {
         type: String,
-        default:  process.versions.chrome
+        default: process.versions.chrome
       },
-      version_electron:{
+      version_electron: {
         type: String,
         default: process.versions.electron
       },
