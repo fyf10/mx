@@ -67,7 +67,7 @@ export default class ConfigManager {
         'follow-torrent': true,
         'listen-port': 21301,
         'max-concurrent-downloads': 5,
-        'max-connection-per-server': getMaxConnectionPerServer(),
+        'max-connection-per-server': 8,
         'max-download-limit': 0,
         'max-overall-download-limit': 0,
         'max-overall-upload-limit': 0,
