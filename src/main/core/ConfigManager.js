@@ -78,7 +78,7 @@ export default class ConfigManager {
         'rpc-secret': EMPTY_STRING,
         'seed-ratio': 2,
         'seed-time': 2880,
-        'split': getMaxConnectionPerServer(),
+        'split': 8,
         'user-agent': CHROME_UA
       }
       /* eslint-enable quote-props */
