@@ -67,7 +67,7 @@ export default class ConfigManager {
         'follow-torrent': true,
         'listen-port': 21301,
         'max-concurrent-downloads': 5,
-        'max-connection-per-server': getMaxConnectionPerServer(),
+        'max-connection-per-server': 8,
         'max-download-limit': 0,
         'max-overall-download-limit': 0,
         'max-overall-upload-limit': 0,
@@ -78,7 +78,7 @@ export default class ConfigManager {
         'rpc-secret': EMPTY_STRING,
         'seed-ratio': 2,
         'seed-time': 2880,
-        'split': getMaxConnectionPerServer(),
+        'split': 8,
         'user-agent': CHROME_UA
       }
       /* eslint-enable quote-props */
