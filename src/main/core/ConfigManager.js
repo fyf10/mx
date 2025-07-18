@@ -60,12 +60,12 @@ export default class ConfigManager {
         'continue': true,
         'dht-file-path': getDhtPath(IP_VERSION.V4),
         'dht-file-path6': getDhtPath(IP_VERSION.V6),
-        'dht-listen-port': 26701,
+        'dht-listen-port': 26703,
         'dir': getUserDownloadsPath(),
         'enable-dht6': true,
         'follow-metalink': true,
         'follow-torrent': true,
-        'listen-port': 21301,
+        'listen-port': 21303,
         'max-concurrent-downloads': 5,
         'max-connection-per-server': getMaxConnectionPerServer(),
         'max-download-limit': 0,
@@ -76,8 +76,8 @@ export default class ConfigManager {
         'pause': true,
         'rpc-listen-port': ENGINE_RPC_PORT,
         'rpc-secret': EMPTY_STRING,
-        'seed-ratio': 2,
-        'seed-time': 2880,
+        'seed-ratio': 0.1,
+        'seed-time': 0,
         'split': getMaxConnectionPerServer(),
         'user-agent': CHROME_UA
       }
@@ -102,7 +102,7 @@ export default class ConfigManager {
       defaults: {
         'auto-check-update': is.macOS(),
         'auto-hide-window': false,
-        'auto-sync-tracker': true,
+        'auto-sync-tracker': false,
         'enable-upnp': true,
         'engine-max-connection-per-server': getMaxConnectionPerServer(),
         'favorite-directories': [],
@@ -130,8 +130,7 @@ export default class ConfigManager {
         'task-notification': true,
         'theme': APP_THEME.AUTO,
         'tracker-source': [
-          NGOSANG_TRACKERS_BEST_IP_URL_CDN,
-          NGOSANG_TRACKERS_BEST_URL_CDN
+          NGOSANG_TRACKERS_BEST_IP_URL_CDN
         ],
         'tray-theme': APP_THEME.AUTO,
         'tray-speedometer': is.macOS(),
@@ -174,8 +173,7 @@ export default class ConfigManager {
 
     if (this.getUserConfig('tracker-source').length === 0) {
       this.setUserConfig('tracker-source', [
-        NGOSANG_TRACKERS_BEST_IP_URL_CDN,
-        NGOSANG_TRACKERS_BEST_URL_CDN
+        NGOSANG_TRACKERS_BEST_IP_URL_CDN
       ])
     }
   }
