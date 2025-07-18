@@ -65,11 +65,13 @@ export const MAX_BT_TRACKER_LENGTH = 6144
 /**
  * @see https://github.com/ngosang/trackerslist
  */
+export const NGOSANG_TRACKERS_ALL_HTTPS_URL = 'https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_https.txt'
 export const NGOSANG_TRACKERS_BEST_URL = 'https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt'
 export const NGOSANG_TRACKERS_BEST_IP_URL = 'https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt'
 export const NGOSANG_TRACKERS_ALL_URL = 'https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt'
 export const NGOSANG_TRACKERS_ALL_IP_URL = 'https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ip.txt'
 
+export const NGOSANG_TRACKERS_ALL_HTTPS_URL_CDN = 'https://cdn.jsdelivr.net/gh/ngosang/trackerslist/trackers_all_https.txt'
 export const NGOSANG_TRACKERS_BEST_URL_CDN = 'https://cdn.jsdelivr.net/gh/ngosang/trackerslist/trackers_best.txt'
 export const NGOSANG_TRACKERS_BEST_IP_URL_CDN = 'https://cdn.jsdelivr.net/gh/ngosang/trackerslist/trackers_best_ip.txt'
 export const NGOSANG_TRACKERS_ALL_URL_CDN = 'https://cdn.jsdelivr.net/gh/ngosang/trackerslist/trackers_all.txt'
@@ -94,6 +96,11 @@ export const TRACKER_SOURCE_OPTIONS = [
     label: 'ngosang/trackerslist',
     options: [
       {
+        value: NGOSANG_TRACKERS_ALL_HTTPS_URL,
+        label: 'trackers_all_https.txt',
+        cdn: false
+      },
+      {
         value: NGOSANG_TRACKERS_BEST_URL,
         label: 'trackers_best.txt',
         cdn: false
@@ -112,6 +119,11 @@ export const TRACKER_SOURCE_OPTIONS = [
         value: NGOSANG_TRACKERS_ALL_IP_URL,
         label: 'trackers_all_ip.txt',
         cdn: false
+      },
+      {
+        value: NGOSANG_TRACKERS_ALL_HTTPS_URL_CDN,
+        label: 'trackers_all_https.txt',
+        cdn: true
       },
       {
         value: NGOSANG_TRACKERS_BEST_URL_CDN,
