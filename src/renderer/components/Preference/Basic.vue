@@ -211,7 +211,7 @@
             <el-input-number
               v-model="form.seedRatio"
               controls-position="right"
-              :min="1"
+              :min="0.1"
               :max="100"
               :step="0.1"
               :label="$t('preferences.seed-ratio')">
@@ -223,7 +223,7 @@
             <el-input-number
               v-model="form.seedTime"
               controls-position="right"
-              :min="60"
+              :min="0"
               :max="525600"
               :step="1"
               :label="$t('preferences.seed-time')">
@@ -544,8 +544,8 @@
         this.form.maxOverallUploadLimit = limit
       },
       onKeepSeedingChange (enable) {
-        this.form.seedRatio = enable ? 0 : 1
-        this.form.seedTime = enable ? 525600 : 60
+        this.form.seedRatio = enable ? 0 : 0.1
+        this.form.seedTime = enable ? 525600 : 0
       },
       handleHistoryDirectorySelected (dir) {
         this.form.dir = dir
