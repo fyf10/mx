@@ -15,8 +15,7 @@ import {
   ENGINE_RPC_PORT,
   IP_VERSION,
   LOGIN_SETTING_OPTIONS,
-  NGOSANG_TRACKERS_BEST_IP_URL_CDN,
-  NGOSANG_TRACKERS_BEST_URL_CDN,
+  NGOSANG_TRACKERS_ALL_HTTPS_URL,
   PROXY_SCOPES,
   PROXY_SCOPE_OPTIONS
 } from '@shared/constants'
@@ -130,8 +129,7 @@ export default class ConfigManager {
         'task-notification': true,
         'theme': APP_THEME.AUTO,
         'tracker-source': [
-          NGOSANG_TRACKERS_BEST_IP_URL_CDN,
-          NGOSANG_TRACKERS_BEST_URL_CDN
+          NGOSANG_TRACKERS_ALL_HTTPS_URL
         ],
         'tray-theme': APP_THEME.AUTO,
         'tray-speedometer': is.macOS(),
@@ -174,8 +172,7 @@ export default class ConfigManager {
 
     if (this.getUserConfig('tracker-source').length === 0) {
       this.setUserConfig('tracker-source', [
-        NGOSANG_TRACKERS_BEST_IP_URL_CDN,
-        NGOSANG_TRACKERS_BEST_URL_CDN
+        NGOSANG_TRACKERS_ALL_HTTPS_URL
       ])
     }
   }
